@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+*{
+
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.banner
+{
+
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1))
+    , url(pexels-binyaminmellish-186077.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+
+
+.navbar
+{
+
+    width: 85%;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.logo{
+
+width: 120px;
+cursor: pointer;
+}
+
+.navbar ul li {
+
+list-style: none;
+display: inline-block;
+margin: 0 20px;
+position: relative;
+}
+
+.navbar ul a{
+
+text-decoration: none;
+color: aliceblue;
+text-transform: uppercase;
+
+}
+
+.navbar ul li::after{
+
+    content: "";
+    height: 3px;
+    width: 100%;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+
+
+}
+
+
+
+.navbar ul li:hover:after{
+    width: 100%;
+
+
+}
+
+.content{
+
+    width: 100%;
+    position: absolute;
+    top: 45%;
+    text-align: center;
+    color: aliceblue;
+}
+
+.content h1{
+
+    font-size: 40px;
+    margin-top: 1%;
+    color: aliceblue;
+}
+
+
+.content p{
+
+margin: 20px auto;
+font-weight: 300;
+color: aliceblue;
+
+}
+
+.button{
+
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    font-weight: bold;
+    border: 2px solid aliceblue;
+    background: transparent;
+    color: aliceblue;
+    cursor: pointer;
+    letter-spacing: 7px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 20vh;
+    }
+
+
+   
+
+    
+    
+
+    a {
+        text-decoration: none; /* Ensures no underlines on links */
+    }
+    
+    .button {
+        width: 200px;
+        padding: 15px 0;
+        text-align: center;
+        margin: 20px 10px;
+        font-weight: bold;
+        border: 2px solid aliceblue;
+        background: transparent;
+        color: aliceblue;
+        cursor: pointer;
+        letter-spacing: 7px;
+        position: relative;
+        overflow: hidden;
+        transition: 0.5s;
+        border-radius: 10px; /* Curved corners */
+    }
+    
+    .button:hover {
+        background-color: black; 
+    }
+    
+
+
+    
