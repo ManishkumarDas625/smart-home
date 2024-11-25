@@ -1,96 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home Setup Guide</title>
-  
+
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f4f4f9;
+    }
 
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    header {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+      animation: fadeIn 1s ease;
+    }
 
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f4f4f9;
-}
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    section:hover {
+      transform: scale(1.02);
+    }
 
 
-header {
-  background-color: #4CAF50;
-  color: #fff;
-  padding: 2rem;
-  text-align: center;
-  animation: fadeIn 1s ease;
-}
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      animation: slideIn 0.5s ease forwards;
+      opacity: 0;
+    }
 
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
 
-main {
-  padding: 2rem;
-}
+    ul,
+    ol {
+      margin-left: 20px;
+    }
 
-section {
-  margin-bottom: 2rem;
+
+    section img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(-20px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+
+    .feedback {
   background-color: #fff;
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  margin-top: 2rem;
 }
 
-section:hover {
-  transform: scale(1.02);
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #4CAF50;
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
 }
 
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  animation: slideIn 0.5s ease forwards;
-  opacity: 0;
-}
-
-
-ul, ol {
-  margin-left: 20px;
-}
-
-
-section img {
-  max-width: 100%;
-  border-radius: 8px;
+.popup button {
   margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: white;
+  color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
+.popup button:hover {
+  background: #ddd;
 }
 
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+button#closePopup {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-@keyframes slideIn {
-  from { transform: translateY(-20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+button#closePopup:hover {
+  background-color: #e68900;
 }
+
 
 
 
@@ -99,6 +163,7 @@ footer {
 
 
 </head>
+
 <body>
   <header>
     <h1>Smart Home Setup Guide</h1>
@@ -116,7 +181,7 @@ footer {
         <li>
           <strong>Google Home:</strong> Integrates seamlessly with Google services and apps.<br><br>
         </li>
-          <img src="home-mini-a-ghmini-chalk-google-original-imaf8dvskdbzytmf.jpeg" height="100" alt="Google Home" />
+        <img src="home-mini-a-ghmini-chalk-google-original-imaf8dvskdbzytmf.jpeg" height="100" alt="Google Home" />
         </li>
         <li>
           <strong>Apple HomeKit:</strong> Secure ecosystem for Apple users with Siri integration.<br><br>
@@ -132,7 +197,8 @@ footer {
         <li>Connect to Hub: Pair bulbs with your chosen smart home hub.</li>
         <li>Create Routines: Set up automated lighting schedules and scenes.</li>
       </ol>
-      <img src="color-changing-smart-led-bulb-promo-philips-hue-lifx-c-by-ge-alexa-google-assistant-home-echo.jpg" height="200" alt="Smart Lighting" />
+      <img src="color-changing-smart-led-bulb-promo-philips-hue-lifx-c-by-ge-alexa-google-assistant-home-echo.jpg"
+        height="200" alt="Smart Lighting" />
     </section>
 
     <section class="smart-thermostats">
@@ -162,7 +228,9 @@ footer {
         <li><strong>Smart Speakers:</strong> Enjoy multi-room audio and voice-controlled music playback.</li>
         <li><strong>Gaming Systems:</strong> Integrate gaming consoles for seamless entertainment experiences.</li>
       </ul>
-      <img src="integrating-audiovisual-equipment-automated-home-entertainment-systems-concept-home-theater-installation-smart-home-automation-audiovisual-integration-multiroom-sound-systems_918839-176619.jpg" height="200" alt="Entertainment Integration" />
+      <img
+        src="integrating-audiovisual-equipment-automated-home-entertainment-systems-concept-home-theater-installation-smart-home-automation-audiovisual-integration-multiroom-sound-systems_918839-176619.jpg"
+        height="200" alt="Entertainment Integration" />
     </section>
 
     <section class="troubleshooting-tips">
@@ -177,16 +245,77 @@ footer {
     <section class="future-proofing">
       <h2>Future-Proofing Your Smart Home</h2>
       <ul>
-        <li><strong>Regular Updates:</strong> Keep all devices and apps updated for optimal performance and security.</li>
+        <li><strong>Regular Updates:</strong> Keep all devices and apps updated for optimal performance and security.
+        </li>
         <li><strong>Expandability:</strong> Choose devices with open protocols for easy integration of future tech.</li>
-        <li><strong>Privacy Considerations:</strong> Review and adjust privacy settings regularly to protect your data.</li>
+        <li><strong>Privacy Considerations:</strong> Review and adjust privacy settings regularly to protect your data.
+        </li>
       </ul>
     </section>
+
+
+    <section class="feedback">
+      <h2>Feedback</h2>
+      <form id="feedbackForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+        <button type="submit">Submit Feedback</button>
+      </form>
+    </section>
+    
+    <div class="popup" id="successPopup">
+      <p>Thank you for your feedback!</p>
+      <button id="closePopup">Close</button>
+    </div>
+    
+    
+
   </main>
 
   <footer>
     <p>&copy; Created By: Manish Kumar Das</p>
     <p>© 2024 Home Setup Guide. All rights reserved.</p>
   </footer>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const feedbackForm = document.getElementById("feedbackForm");
+  const successPopup = document.getElementById("successPopup");
+  const closeButton = document.getElementById("closePopup");
+
+  feedbackForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    if (name && email && message) {
+      const popupMessage = successPopup.querySelector("p");
+      popupMessage.textContent = `Thank you for your feedback, ${name}! `;
+      successPopup.style.display = "block";
+      feedbackForm.reset();
+    }
+  });
+
+  closeButton.addEventListener("click", function () {
+    successPopup.style.display = "none";
+  });
+});
+
+</script>
+
+
+  
+
+
+
+
 </body>
+
 </html>
